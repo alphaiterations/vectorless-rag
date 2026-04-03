@@ -1,0 +1,821 @@
+17:34:39  INFO     
+═════════════════════════════════════════════════════════════════
+  New Query
+═════════════════════════════════════════════════════════════════
+17:34:39  INFO     
+  Q: What is Bigtable and what problem does it solve?
+
+17:34:39  INFO     
+┌─ Depth 0 | Node: "bigtable-osdi06.pdf"
+17:34:39  INFO     │  id=root  pages=1-13
+17:34:39  INFO     │  children=['**Bigtable: A Distributed Storage System for Structured Data**']
+17:34:39  INFO     
+─────────────────────────────────────────────────────────────────
+17:34:39  INFO       LLM Call #1  [NAVIGATE]
+17:34:39  INFO     ─────────────────────────────────────────────────────────────────
+17:34:39  DEBUG    PROMPT:
+    You are navigating a research paper tree to answer a query.
+    
+    Query: "What is Bigtable and what problem does it solve?"
+    
+    Current node:
+      id      : root
+      title   : bigtable-osdi06.pdf
+      summary : 
+      pages   : 1–13
+      preview : N/A
+    
+    Children: [
+      {
+        "id": "Bigtable_A_Distribut_0",
+        "title": "**Bigtable: A Distributed Storage System for Structured Data**",
+        "summary": "Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber \n\n{fay,jeff"
+      }
+    ]
+    
+    Decide:
+    1. confidence      : 0–1, how likely does this node (or its children) contain the answer?
+    2. should_descend  : true only if a specific child is more relevant than this node's content
+    3. target_child_id : the id of the best child to visit (null if should_descend is false)
+    4. reasoning       : one sentence explaining your decision
+    
+    Respond ONLY as valid JSON, no markdown fences:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "1_Introduction_12",
+      "reasoning": "The Introduction section directly addresses what Bigtable is."
+    }
+17:34:43  DEBUG    RAW RESPONSE:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "Bigtable_A_Distribut_0",
+      "reasoning": "The child node is titled 'Bigtable: A Distributed Storage System for Structured Data' and is likely to provide a detailed explanation of what Bigtable is and the problems it addresses." 
+    }
+17:34:43  INFO       Model    : gpt-4o-mini
+17:34:43  INFO       Latency  : 3.61s
+17:34:43  INFO       Tokens   : 310 in / 77 out
+17:34:43  INFO     │
+17:34:43  INFO     │  Decision   : ↓ descend
+17:34:43  INFO     │  Confidence : 85%
+17:34:43  INFO     │  Next node  : Bigtable_A_Distribut_0
+17:34:43  INFO     │  Reasoning  : The child node is titled 'Bigtable: A Distributed Storage System for Structured Data' and is likely to provide a detailed explanation of what Bigtable is and the problems it addresses.
+17:34:43  INFO     └─ (3.61s)
+17:34:43  INFO     
+  ➜  Descending into: "**Bigtable: A Distributed Storage System for Structured Data**"
+17:34:43  INFO     
+  ┌─ Depth 1 | Node: "**Bigtable: A Distributed Storage System for Structured Data**"
+17:34:43  INFO       │  id=Bigtable_A_Distribut_0  pages=1-13
+17:34:43  INFO       │  children=['**Abstract**', '**1 Introduction**', '**2 Data Model**', '**Rows**', '**Column Families**', '**Timestamps**', 'Figure 2: Writing to Bigtable.', '**3 API**', 'Figure 3: Reading from Bigtable.', '**4 Building Blocks**', '**5 Implementation**', '**5.1 Tablet Location**', '**5.2 Tablet Assignment**', '**5.3 Tablet Serving**', '**5.4 Compactions**', '**6**', '**Locality groups**', '**Caching for read performance**', '', '**Compression**', '**Commit-log implementation**', '**Speeding up tablet recovery**', '**Exploiting immutability**', '**7 Performance Evaluation**', '**Single tablet-server performance**', '**Scaling**', '**8 Real Applications**', '**8.1 Google Analytics**', '**8.2 Google Earth**', '**8.3 Personalized Search**', '**9 Lessons**', '**10 Related Work**', '**Acknowledgements**', '**References**', '**11 Conclusions**']
+17:34:43  INFO     
+─────────────────────────────────────────────────────────────────
+17:34:43  INFO       LLM Call #2  [NAVIGATE]
+17:34:43  INFO     ─────────────────────────────────────────────────────────────────
+17:34:43  DEBUG    PROMPT:
+    You are navigating a research paper tree to answer a query.
+    
+    Query: "What is Bigtable and what problem does it solve?"
+    
+    Current node:
+      id      : Bigtable_A_Distribut_0
+      title   : **Bigtable: A Distributed Storage System for Structured Data**
+      summary : Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber 
+    
+    {fay,jeff,sanjay,wilsonh,kerr,m3b,tushar,fikes,gruber}@google.com 
+    
+    _Google, Inc._
+      pages   : 1–13
+      preview : 
+    
+    Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber 
+    
+    {fay,jeff,sanjay,wilsonh,kerr,m3b,tushar,fikes,gruber}@google.com 
+    
+    _Google, Inc._
+    
+    Children: [
+      {
+        "id": "Abstract_8",
+        "title": "**Abstract**",
+        "summary": "Bigtable is a distributed storage system for managing structured data that is designed to scale to a very large size: petabytes of data across thousan"
+      },
+      {
+        "id": "1_Introduction_12",
+        "title": "**1 Introduction**",
+        "summary": "Over the last two and a half years we have designed, implemented, and deployed a distributed storage system for managing structured data at Google cal"
+      },
+      {
+        "id": "2_Data_Model_22",
+        "title": "**2 Data Model**",
+        "summary": "A Bigtable is a sparse, distributed, persistent multidimensional sorted map. The map is indexed by a row key, column key, and a timestamp; each value "
+      },
+      {
+        "id": "Rows_50",
+        "title": "**Rows**",
+        "summary": "The row keys in a table are arbitrary strings (currently up to 64KB in size, although 10-100 bytes is a typical size for most of our users). Every rea"
+      },
+      {
+        "id": "Column_Families_56",
+        "title": "**Column Families**",
+        "summary": "Column keys are grouped into sets called _column families_ , which form the basic unit of access control. All data stored in a column family is usuall"
+      },
+      {
+        "id": "Timestamps_64",
+        "title": "**Timestamps**",
+        "summary": "Each cell in a Bigtable can contain multiple versions of the same data; these versions are indexed by timestamp. Bigtable timestamps are 64-bit intege"
+      },
+      {
+        "id": "Figure_2_Writing_to__76",
+        "title": "Figure 2: Writing to Bigtable.",
+        "summary": "applications. Applications that need to avoid collisions must generate unique timestamps themselves. Different versions of a cell are stored in decrea"
+      },
+      {
+        "id": "3_API_84",
+        "title": "**3 API**",
+        "summary": "The Bigtable API provides functions for creating and deleting tables and column families. It also provides functions for changing cluster, table, and "
+      },
+      {
+        "id": "Figure_3_Reading_fro_104",
+        "title": "Figure 3: Reading from Bigtable.",
+        "summary": "Bigtable supports several other features that allow the user to manipulate data in more complex ways. First, Bigtable supports single-row transactions"
+      },
+      {
+        "id": "4_Building_Blocks_110",
+        "title": "**4 Building Blocks**",
+        "summary": "Bigtable is built on several other pieces of Google infrastructure. Bigtable uses the distributed Google File System (GFS) [17] to store log and data "
+      },
+      {
+        "id": "5_Implementation_126",
+        "title": "**5 Implementation**",
+        "summary": "The Bigtable implementation has three major components: a library that is linked into every client, one master server, and many tablet servers. Tablet"
+      },
+      {
+        "id": "5_1_Tablet_Location_140",
+        "title": "**5.1 Tablet Location**",
+        "summary": "- We use a three-level hierarchy analogous to that of a B[+] tree [10] to store tablet location information (Figure 4). \n\n**==> picture [224 x 114] in"
+      },
+      {
+        "id": "5_2_Tablet_Assignmen_166",
+        "title": "**5.2 Tablet Assignment**",
+        "summary": "Each tablet is assigned to one tablet server at a time. The master keeps track of the set of live tablet servers, and the current assignment of tablet"
+      },
+      {
+        "id": "5_3_Tablet_Serving_186",
+        "title": "**5.3 Tablet Serving**",
+        "summary": "The persistent state of a tablet is stored in GFS, as illustrated in Figure 5. Updates are committed to a commit log that stores redo records. Of thes"
+      },
+      {
+        "id": "5_4_Compactions_206",
+        "title": "**5.4 Compactions**",
+        "summary": "As write operations execute, the size of the memtable increases. When the memtable size reaches a threshold, the memtable is frozen, a new memtable is"
+      },
+      {
+        "id": "6_214",
+        "title": "**6**",
+        "summary": "The implementation described in the previous section required a number of refinements to achieve the high performance, availability, and reliability r"
+      },
+      {
+        "id": "Locality_groups_218",
+        "title": "**Locality groups**",
+        "summary": "Clients can group multiple column families together into a _locality group_ . A separate SSTable is generated for each locality group in each tablet. "
+      },
+      {
+        "id": "Caching_for_read_per_230",
+        "title": "**Caching for read performance**",
+        "summary": "To improve read performance, tablet servers use two levels of caching. The Scan Cache is a higher-level cache that caches the key-value pairs returned"
+      },
+      {
+        "id": "_234",
+        "title": "",
+        "summary": ""
+      },
+      {
+        "id": "Compression_236",
+        "title": "**Compression**",
+        "summary": "Clients can control whether or not the SSTables for a locality group are compressed, and if so, which compression format is used. The user-specified c"
+      },
+      {
+        "id": "Commit_log_implement_244",
+        "title": "**Commit-log implementation**",
+        "summary": "If we kept the commit log for each tablet in a separate log file, a very large number of files would be written concurrently in GFS. Depending on the "
+      },
+      {
+        "id": "Speeding_up_tablet_r_260",
+        "title": "**Speeding up tablet recovery**",
+        "summary": "If the master moves a tablet from one tablet server to another, the source tablet server first does a minor compaction on that tablet. This compaction"
+      },
+      {
+        "id": "Exploiting_immutabil_264",
+        "title": "**Exploiting immutability**",
+        "summary": "Besides the SSTable caches, various other parts of the Bigtable system have been simplified by the fact that all \n\nof the SSTables that we generate ar"
+      },
+      {
+        "id": "7_Performance_Evalua_274",
+        "title": "**7 Performance Evaluation**",
+        "summary": "We set up a Bigtable cluster with N tablet servers to measure the performance and scalability of Bigtable as N is varied. The tablet servers were conf"
+      },
+      {
+        "id": "Single_tablet_server_322",
+        "title": "**Single tablet-server performance**",
+        "summary": "Let us first consider performance with just one tablet server. Random reads are slower than all other operations by an order of magnitude or more. Eac"
+      },
+      {
+        "id": "Scaling_334",
+        "title": "**Scaling**",
+        "summary": "Aggregate throughput increases dramatically, by over a factor of a hundred, as we increase the number of tablet servers in the system from 1 to 500. F"
+      },
+      {
+        "id": "8_Real_Applications_360",
+        "title": "**8 Real Applications**",
+        "summary": "As of August 2006, there are 388 non-test Bigtable clusters running in various Google machine clusters, with a combined total of about 24,500 tablet s"
+      },
+      {
+        "id": "8_1_Google_Analytics_368",
+        "title": "**8.1 Google Analytics**",
+        "summary": "Google Analytics (analytics.google.com) is a service that helps webmasters analyze traffic patterns at their web sites. It provides aggregate statisti"
+      },
+      {
+        "id": "8_2_Google_Earth_378",
+        "title": "**8.2 Google Earth**",
+        "summary": "Google operates a collection of services that provide users with access to high-resolution satellite imagery of the world\u2019s surface, both through the "
+      },
+      {
+        "id": "8_3_Personalized_Sea_415",
+        "title": "**8.3 Personalized Search**",
+        "summary": ""
+      },
+      {
+        "id": "9_Lessons_417",
+        "title": "**9 Lessons**",
+        "summary": "Personalized Search (www.google.com/psearch) is an opt-in service that records user queries and clicks across a variety of Google properties such as w"
+      },
+      {
+        "id": "10_Related_Work_441",
+        "title": "**10 Related Work**",
+        "summary": "The Boxwood project [24] has components that overlap in some ways with Chubby, GFS, and Bigtable, since it provides for distributed agreement, locking"
+      },
+      {
+        "id": "Acknowledgements_469",
+        "title": "**Acknowledgements**",
+        "summary": "We thank the anonymous reviewers, David Nagle, and our shepherd Brad Calder, for their feedback on this paper. The Bigtable system has benefited great"
+      },
+      {
+        "id": "References_473",
+        "title": "**References**",
+        "summary": ""
+      },
+      {
+        "id": "11_Conclusions_475",
+        "title": "**11 Conclusions**",
+        "summary": "We have described Bigtable, a distributed system for storing structured data at Google. Bigtable clusters have been in production use since April 2005"
+      }
+    ]
+    
+    Decide:
+    1. confidence      : 0–1, how likely does this node (or its children) contain the answer?
+    2. should_descend  : true only if a specific child is more relevant than this node's content
+    3. target_child_id : the id of the best child to visit (null if should_descend is false)
+    4. reasoning       : one sentence explaining your decision
+    
+    Respond ONLY as valid JSON, no markdown fences:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "1_Introduction_12",
+      "reasoning": "The Introduction section directly addresses what Bigtable is."
+    }
+17:34:45  DEBUG    RAW RESPONSE:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "1_Introduction_12",
+      "reasoning": "The Introduction section directly addresses what Bigtable is."
+    }
+17:34:45  INFO       Model    : gpt-4o-mini
+17:34:45  INFO       Latency  : 1.92s
+17:34:45  INFO       Tokens   : 2481 in / 48 out
+17:34:45  INFO       │
+17:34:45  INFO       │  Decision   : ↓ descend
+17:34:45  INFO       │  Confidence : 85%
+17:34:45  INFO       │  Next node  : 1_Introduction_12
+17:34:45  INFO       │  Reasoning  : The Introduction section directly addresses what Bigtable is.
+17:34:45  INFO       └─ (1.92s)
+17:34:45  INFO     
+    ➜  Descending into: "**1 Introduction**"
+17:34:45  INFO     
+    ┌─ Depth 2 | Node: "**1 Introduction**"
+17:34:45  INFO         │  id=1_Introduction_12  pages=1-1
+17:34:45  INFO         │  children=none (leaf)
+17:34:45  INFO     
+─────────────────────────────────────────────────────────────────
+17:34:45  INFO       LLM Call #3  [NAVIGATE]
+17:34:45  INFO     ─────────────────────────────────────────────────────────────────
+17:34:45  DEBUG    PROMPT:
+    You are navigating a research paper tree to answer a query.
+    
+    Query: "What is Bigtable and what problem does it solve?"
+    
+    Current node:
+      id      : 1_Introduction_12
+      title   : **1 Introduction**
+      summary : Over the last two and a half years we have designed, implemented, and deployed a distributed storage system for managing structured data at Google called Bigtable. Bigtable is designed to reliably scale to petabytes of data and thousands of machines. Bigtable has achieved several goals: wide applica
+      pages   : 1–1
+      preview : 
+    
+    Over the last two and a half years we have designed, implemented, and deployed a distributed storage system for managing structured data at Google called Bigtable. Bigtable is designed to reliably scale to petabytes of data and thousands of machines. Bigtable has achieved several goals: wide applicability, scalability, high performance, and high availability. Bigtable is used by more than sixty Google products and projects, including Google Analytics, Google Finance, Orkut, Personalized Search
+    
+    Children: None (leaf node)
+    
+    Decide:
+    1. confidence      : 0–1, how likely does this node (or its children) contain the answer?
+    2. should_descend  : true only if a specific child is more relevant than this node's content
+    3. target_child_id : the id of the best child to visit (null if should_descend is false)
+    4. reasoning       : one sentence explaining your decision
+    
+    Respond ONLY as valid JSON, no markdown fences:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "1_Introduction_12",
+      "reasoning": "The Introduction section directly addresses what Bigtable is."
+    }
+17:34:47  DEBUG    RAW RESPONSE:
+    {
+      "confidence": 0.85,
+      "should_descend": false,
+      "target_child_id": null,
+      "reasoning": "The Introduction section directly addresses what Bigtable is and the problems it solves, making it sufficient for the query." 
+    }
+17:34:47  INFO       Model    : gpt-4o-mini
+17:34:47  INFO       Latency  : 2.21s
+17:34:47  INFO       Tokens   : 369 in / 56 out
+17:34:47  INFO         │
+17:34:47  INFO         │  Decision   : → retrieve
+17:34:47  INFO         │  Confidence : 85%
+17:34:47  INFO         │  Reasoning  : The Introduction section directly addresses what Bigtable is and the problems it solves, making it sufficient for the query.
+17:34:47  INFO         └─ (2.21s)
+17:34:47  INFO     
+      ✦  Retrieving content from: "**1 Introduction**"
+17:34:47  INFO              Pages 1–1 | 2539 chars
+17:34:47  INFO     
+─────────────────────────────────────────────────────────────────
+17:34:47  INFO       Generating answer from 1 retrieved section(s):
+17:34:47  INFO         • === ****1 Introduction**** (Pages 1-1) ===
+17:34:47  INFO     
+─────────────────────────────────────────────────────────────────
+17:34:47  INFO       LLM Call #4  [ANSWER]
+17:34:47  INFO     ─────────────────────────────────────────────────────────────────
+17:34:47  DEBUG    PROMPT:
+    You are an expert on distributed systems and database engineering.
+    Answer the question using ONLY the retrieved document sections below.
+    Cite the section title and page range for every claim you make.
+    If the context is insufficient, say so clearly — do not guess.
+    
+    Question: What is Bigtable and what problem does it solve?
+    
+    Retrieved sections:
+    === ****1 Introduction**** (Pages 1-1) ===
+    
+    
+    Over the last two and a half years we have designed, implemented, and deployed a distributed storage system for managing structured data at Google called Bigtable. Bigtable is designed to reliably scale to petabytes of data and thousands of machines. Bigtable has achieved several goals: wide applicability, scalability, high performance, and high availability. Bigtable is used by more than sixty Google products and projects, including Google Analytics, Google Finance, Orkut, Personalized Search, Writely, and Google Earth. These products use Bigtable for a variety of demanding workloads, which range from throughput-oriented batch-processing jobs to latency-sensitive serving of data to end users. The Bigtable clusters used by these products span a wide range of configurations, from a handful to thousands of servers, and store up to several hundred terabytes of data. 
+    
+    In many ways, Bigtable resembles a database: it shares many implementation strategies with databases. Parallel databases [14] and main-memory databases [13] have 
+    
+    achieved scalability and high performance, but Bigtable provides a different interface than such systems. Bigtable does not support a full relational data model; instead, it provides clients with a simple data model that supports dynamic control over data layout and format, and allows clients to reason about the locality properties of the data represented in the underlying storage. Data is indexed using row and column names that can be arbitrary strings. Bigtable also treats data as uninterpreted strings, although clients often serialize various forms of structured and semi-structured data into these strings. Clients can control the locality of their data through careful choices in their schemas. Finally, Bigtable schema parameters let clients dynamically control whether to serve data out of memory or from disk. 
+    
+    Section 2 describes the data model in more detail, and Section 3 provides an overview of the client API. Section 4 briefly describes the underlying Google infrastructure on which Bigtable depends. Section 5 describes the fundamentals of the Bigtable implementation, and Section 6 describes some of the refinements that we made to improve Bigtable’s performance. Section 7 provides measurements of Bigtable’s performance. We describe several examples of how Bigtable is used at Google in Section 8, and discuss some lessons we learned in designing and supporting Bigtable in Section 9. Finally, Section 10 describes related work, and Section 11 presents our conclusions.
+    
+    Answer:
+17:34:52  DEBUG    RAW RESPONSE:
+    Bigtable is a distributed storage system designed for managing structured data at Google. It addresses the need for a system that can reliably scale to petabytes of data and thousands of machines while achieving goals such as wide applicability, scalability, high performance, and high availability. It is utilized by over sixty Google products and projects for various demanding workloads, including both throughput-oriented batch-processing jobs and latency-sensitive data serving to end users (Section 1 Introduction, Pages 1-1).
+    
+    Unlike traditional databases, Bigtable does not support a full relational data model. Instead, it offers a simple data model that allows clients to dynamically control data layout and format, and to manage data locality. Data is indexed using arbitrary strings for row and column names, and it treats data as uninterpreted strings, which can be serialized into various forms of structured and semi-structured data. Clients can also influence data locality through schema choices and can decide whether to serve data from memory or disk (Section 1 Introduction, Pages 1-1).
+17:34:52  INFO       Model    : gpt-4o-mini
+17:34:52  INFO       Latency  : 5.47s
+17:34:52  INFO       Tokens   : 564 in / 203 out
+17:34:52  INFO     
+  Answer generated in 5.47s
+17:34:52  INFO     
+═════════════════════════════════════════════════════════════════
+17:34:52  INFO       RETRIEVAL SUMMARY
+17:34:52  INFO     ═════════════════════════════════════════════════════════════════
+17:34:52  INFO       Total LLM calls : 4  (3 navigate + 1 answer)
+17:34:52  INFO       Path taken      : root → Bigtable_A_Distribut_0 → 1_Introduction_12
+17:34:52  INFO       Total latency   : 13.21s
+17:34:52  INFO     ═════════════════════════════════════════════════════════════════
+23:04:45  INFO     Workflow visualization saved to: results/workflow.png
+23:04:45  INFO     
+═════════════════════════════════════════════════════════════════
+  New Query
+═════════════════════════════════════════════════════════════════
+23:04:45  INFO     
+  Q: What is Bigtable and what problem does it solve?
+
+23:05:50  INFO     Workflow visualization saved to: results/workflow.png
+23:05:50  INFO     
+═════════════════════════════════════════════════════════════════
+  New Query
+═════════════════════════════════════════════════════════════════
+23:05:50  INFO     
+  Q: What is Bigtable and what problem does it solve?
+
+23:05:50  INFO     
+┌─ Depth 0 | Node: "bigtable-osdi06.pdf"
+23:05:50  INFO     │  id=root  pages=1-13
+23:05:50  INFO     │  children=['**Bigtable: A Distributed Storage System for Structured Data**']
+23:05:50  INFO     
+─────────────────────────────────────────────────────────────────
+23:05:50  INFO       LLM Call #1  [NAVIGATE]
+23:05:50  INFO     ─────────────────────────────────────────────────────────────────
+23:05:50  DEBUG    PROMPT:
+    You are navigating a research paper tree to answer a query.
+    
+    Query: "What is Bigtable and what problem does it solve?"
+    
+    Current node:
+      id      : root
+      title   : bigtable-osdi06.pdf
+      summary : 
+      pages   : 1–13
+      preview : N/A
+    
+    Children: [
+      {
+        "id": "Bigtable_A_Distribut_0",
+        "title": "**Bigtable: A Distributed Storage System for Structured Data**",
+        "summary": "Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber \n\n{fay,jeff"
+      }
+    ]
+    
+    Decide:
+    1. confidence      : 0–1, how likely does this node (or its children) contain the answer?
+    2. should_descend  : true only if a specific child is more relevant than this node's content
+    3. target_child_id : the id of the best child to visit (null if should_descend is false)
+    4. reasoning       : one sentence explaining your decision
+    
+    Respond ONLY as valid JSON, no markdown fences:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "1_Introduction_12",
+      "reasoning": "The Introduction section directly addresses what Bigtable is."
+    }
+23:05:54  DEBUG    RAW RESPONSE:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "Bigtable_A_Distribut_0",
+      "reasoning": "The child node is titled 'Bigtable: A Distributed Storage System for Structured Data', which suggests it will provide a detailed explanation of what Bigtable is and the problems it addresses." 
+    }
+23:05:54  INFO       Model    : gpt-4o-mini
+23:05:54  INFO       Latency  : 3.50s
+23:05:54  INFO       Tokens   : 310 in / 77 out
+23:05:54  INFO     │
+23:05:54  INFO     │  Decision   : ↓ descend
+23:05:54  INFO     │  Confidence : 85%
+23:05:54  INFO     │  Next node  : Bigtable_A_Distribut_0
+23:05:54  INFO     │  Reasoning  : The child node is titled 'Bigtable: A Distributed Storage System for Structured Data', which suggests it will provide a detailed explanation of what Bigtable is and the problems it addresses.
+23:05:54  INFO     └─ (3.50s)
+23:05:54  INFO     
+  ➜  Descending into: "**Bigtable: A Distributed Storage System for Structured Data**"
+23:05:54  INFO     
+  ┌─ Depth 1 | Node: "**Bigtable: A Distributed Storage System for Structured Data**"
+23:05:54  INFO       │  id=Bigtable_A_Distribut_0  pages=1-13
+23:05:54  INFO       │  children=['**Abstract**', '**1 Introduction**', '**2 Data Model**', '**Rows**', '**Column Families**', '**Timestamps**', 'Figure 2: Writing to Bigtable.', '**3 API**', 'Figure 3: Reading from Bigtable.', '**4 Building Blocks**', '**5 Implementation**', '**5.1 Tablet Location**', '**5.2 Tablet Assignment**', '**5.3 Tablet Serving**', '**5.4 Compactions**', '**6**', '**Locality groups**', '**Caching for read performance**', '', '**Compression**', '**Commit-log implementation**', '**Speeding up tablet recovery**', '**Exploiting immutability**', '**7 Performance Evaluation**', '**Single tablet-server performance**', '**Scaling**', '**8 Real Applications**', '**8.1 Google Analytics**', '**8.2 Google Earth**', '**8.3 Personalized Search**', '**9 Lessons**', '**10 Related Work**', '**Acknowledgements**', '**References**', '**11 Conclusions**']
+23:05:54  INFO     
+─────────────────────────────────────────────────────────────────
+23:05:54  INFO       LLM Call #2  [NAVIGATE]
+23:05:54  INFO     ─────────────────────────────────────────────────────────────────
+23:05:54  DEBUG    PROMPT:
+    You are navigating a research paper tree to answer a query.
+    
+    Query: "What is Bigtable and what problem does it solve?"
+    
+    Current node:
+      id      : Bigtable_A_Distribut_0
+      title   : **Bigtable: A Distributed Storage System for Structured Data**
+      summary : Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber 
+    
+    {fay,jeff,sanjay,wilsonh,kerr,m3b,tushar,fikes,gruber}@google.com 
+    
+    _Google, Inc._
+      pages   : 1–13
+      preview : 
+    
+    Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber 
+    
+    {fay,jeff,sanjay,wilsonh,kerr,m3b,tushar,fikes,gruber}@google.com 
+    
+    _Google, Inc._
+    
+    Children: [
+      {
+        "id": "Abstract_8",
+        "title": "**Abstract**",
+        "summary": "Bigtable is a distributed storage system for managing structured data that is designed to scale to a very large size: petabytes of data across thousan"
+      },
+      {
+        "id": "1_Introduction_12",
+        "title": "**1 Introduction**",
+        "summary": "Over the last two and a half years we have designed, implemented, and deployed a distributed storage system for managing structured data at Google cal"
+      },
+      {
+        "id": "2_Data_Model_22",
+        "title": "**2 Data Model**",
+        "summary": "A Bigtable is a sparse, distributed, persistent multidimensional sorted map. The map is indexed by a row key, column key, and a timestamp; each value "
+      },
+      {
+        "id": "Rows_50",
+        "title": "**Rows**",
+        "summary": "The row keys in a table are arbitrary strings (currently up to 64KB in size, although 10-100 bytes is a typical size for most of our users). Every rea"
+      },
+      {
+        "id": "Column_Families_56",
+        "title": "**Column Families**",
+        "summary": "Column keys are grouped into sets called _column families_ , which form the basic unit of access control. All data stored in a column family is usuall"
+      },
+      {
+        "id": "Timestamps_64",
+        "title": "**Timestamps**",
+        "summary": "Each cell in a Bigtable can contain multiple versions of the same data; these versions are indexed by timestamp. Bigtable timestamps are 64-bit intege"
+      },
+      {
+        "id": "Figure_2_Writing_to__76",
+        "title": "Figure 2: Writing to Bigtable.",
+        "summary": "applications. Applications that need to avoid collisions must generate unique timestamps themselves. Different versions of a cell are stored in decrea"
+      },
+      {
+        "id": "3_API_84",
+        "title": "**3 API**",
+        "summary": "The Bigtable API provides functions for creating and deleting tables and column families. It also provides functions for changing cluster, table, and "
+      },
+      {
+        "id": "Figure_3_Reading_fro_104",
+        "title": "Figure 3: Reading from Bigtable.",
+        "summary": "Bigtable supports several other features that allow the user to manipulate data in more complex ways. First, Bigtable supports single-row transactions"
+      },
+      {
+        "id": "4_Building_Blocks_110",
+        "title": "**4 Building Blocks**",
+        "summary": "Bigtable is built on several other pieces of Google infrastructure. Bigtable uses the distributed Google File System (GFS) [17] to store log and data "
+      },
+      {
+        "id": "5_Implementation_126",
+        "title": "**5 Implementation**",
+        "summary": "The Bigtable implementation has three major components: a library that is linked into every client, one master server, and many tablet servers. Tablet"
+      },
+      {
+        "id": "5_1_Tablet_Location_140",
+        "title": "**5.1 Tablet Location**",
+        "summary": "- We use a three-level hierarchy analogous to that of a B[+] tree [10] to store tablet location information (Figure 4). \n\n**==> picture [224 x 114] in"
+      },
+      {
+        "id": "5_2_Tablet_Assignmen_166",
+        "title": "**5.2 Tablet Assignment**",
+        "summary": "Each tablet is assigned to one tablet server at a time. The master keeps track of the set of live tablet servers, and the current assignment of tablet"
+      },
+      {
+        "id": "5_3_Tablet_Serving_186",
+        "title": "**5.3 Tablet Serving**",
+        "summary": "The persistent state of a tablet is stored in GFS, as illustrated in Figure 5. Updates are committed to a commit log that stores redo records. Of thes"
+      },
+      {
+        "id": "5_4_Compactions_206",
+        "title": "**5.4 Compactions**",
+        "summary": "As write operations execute, the size of the memtable increases. When the memtable size reaches a threshold, the memtable is frozen, a new memtable is"
+      },
+      {
+        "id": "6_214",
+        "title": "**6**",
+        "summary": "The implementation described in the previous section required a number of refinements to achieve the high performance, availability, and reliability r"
+      },
+      {
+        "id": "Locality_groups_218",
+        "title": "**Locality groups**",
+        "summary": "Clients can group multiple column families together into a _locality group_ . A separate SSTable is generated for each locality group in each tablet. "
+      },
+      {
+        "id": "Caching_for_read_per_230",
+        "title": "**Caching for read performance**",
+        "summary": "To improve read performance, tablet servers use two levels of caching. The Scan Cache is a higher-level cache that caches the key-value pairs returned"
+      },
+      {
+        "id": "_234",
+        "title": "",
+        "summary": ""
+      },
+      {
+        "id": "Compression_236",
+        "title": "**Compression**",
+        "summary": "Clients can control whether or not the SSTables for a locality group are compressed, and if so, which compression format is used. The user-specified c"
+      },
+      {
+        "id": "Commit_log_implement_244",
+        "title": "**Commit-log implementation**",
+        "summary": "If we kept the commit log for each tablet in a separate log file, a very large number of files would be written concurrently in GFS. Depending on the "
+      },
+      {
+        "id": "Speeding_up_tablet_r_260",
+        "title": "**Speeding up tablet recovery**",
+        "summary": "If the master moves a tablet from one tablet server to another, the source tablet server first does a minor compaction on that tablet. This compaction"
+      },
+      {
+        "id": "Exploiting_immutabil_264",
+        "title": "**Exploiting immutability**",
+        "summary": "Besides the SSTable caches, various other parts of the Bigtable system have been simplified by the fact that all \n\nof the SSTables that we generate ar"
+      },
+      {
+        "id": "7_Performance_Evalua_274",
+        "title": "**7 Performance Evaluation**",
+        "summary": "We set up a Bigtable cluster with N tablet servers to measure the performance and scalability of Bigtable as N is varied. The tablet servers were conf"
+      },
+      {
+        "id": "Single_tablet_server_322",
+        "title": "**Single tablet-server performance**",
+        "summary": "Let us first consider performance with just one tablet server. Random reads are slower than all other operations by an order of magnitude or more. Eac"
+      },
+      {
+        "id": "Scaling_334",
+        "title": "**Scaling**",
+        "summary": "Aggregate throughput increases dramatically, by over a factor of a hundred, as we increase the number of tablet servers in the system from 1 to 500. F"
+      },
+      {
+        "id": "8_Real_Applications_360",
+        "title": "**8 Real Applications**",
+        "summary": "As of August 2006, there are 388 non-test Bigtable clusters running in various Google machine clusters, with a combined total of about 24,500 tablet s"
+      },
+      {
+        "id": "8_1_Google_Analytics_368",
+        "title": "**8.1 Google Analytics**",
+        "summary": "Google Analytics (analytics.google.com) is a service that helps webmasters analyze traffic patterns at their web sites. It provides aggregate statisti"
+      },
+      {
+        "id": "8_2_Google_Earth_378",
+        "title": "**8.2 Google Earth**",
+        "summary": "Google operates a collection of services that provide users with access to high-resolution satellite imagery of the world\u2019s surface, both through the "
+      },
+      {
+        "id": "8_3_Personalized_Sea_415",
+        "title": "**8.3 Personalized Search**",
+        "summary": ""
+      },
+      {
+        "id": "9_Lessons_417",
+        "title": "**9 Lessons**",
+        "summary": "Personalized Search (www.google.com/psearch) is an opt-in service that records user queries and clicks across a variety of Google properties such as w"
+      },
+      {
+        "id": "10_Related_Work_441",
+        "title": "**10 Related Work**",
+        "summary": "The Boxwood project [24] has components that overlap in some ways with Chubby, GFS, and Bigtable, since it provides for distributed agreement, locking"
+      },
+      {
+        "id": "Acknowledgements_469",
+        "title": "**Acknowledgements**",
+        "summary": "We thank the anonymous reviewers, David Nagle, and our shepherd Brad Calder, for their feedback on this paper. The Bigtable system has benefited great"
+      },
+      {
+        "id": "References_473",
+        "title": "**References**",
+        "summary": ""
+      },
+      {
+        "id": "11_Conclusions_475",
+        "title": "**11 Conclusions**",
+        "summary": "We have described Bigtable, a distributed system for storing structured data at Google. Bigtable clusters have been in production use since April 2005"
+      }
+    ]
+    
+    Decide:
+    1. confidence      : 0–1, how likely does this node (or its children) contain the answer?
+    2. should_descend  : true only if a specific child is more relevant than this node's content
+    3. target_child_id : the id of the best child to visit (null if should_descend is false)
+    4. reasoning       : one sentence explaining your decision
+    
+    Respond ONLY as valid JSON, no markdown fences:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "1_Introduction_12",
+      "reasoning": "The Introduction section directly addresses what Bigtable is."
+    }
+23:05:56  DEBUG    RAW RESPONSE:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "1_Introduction_12",
+      "reasoning": "The Introduction section directly addresses what Bigtable is."
+    }
+23:05:56  INFO       Model    : gpt-4o-mini
+23:05:56  INFO       Latency  : 2.14s
+23:05:56  INFO       Tokens   : 2481 in / 48 out
+23:05:56  INFO       │
+23:05:56  INFO       │  Decision   : ↓ descend
+23:05:56  INFO       │  Confidence : 85%
+23:05:56  INFO       │  Next node  : 1_Introduction_12
+23:05:56  INFO       │  Reasoning  : The Introduction section directly addresses what Bigtable is.
+23:05:56  INFO       └─ (2.14s)
+23:05:56  INFO     
+    ➜  Descending into: "**1 Introduction**"
+23:05:56  INFO     
+    ┌─ Depth 2 | Node: "**1 Introduction**"
+23:05:56  INFO         │  id=1_Introduction_12  pages=1-1
+23:05:56  INFO         │  children=none (leaf)
+23:05:56  INFO     
+─────────────────────────────────────────────────────────────────
+23:05:56  INFO       LLM Call #3  [NAVIGATE]
+23:05:56  INFO     ─────────────────────────────────────────────────────────────────
+23:05:56  DEBUG    PROMPT:
+    You are navigating a research paper tree to answer a query.
+    
+    Query: "What is Bigtable and what problem does it solve?"
+    
+    Current node:
+      id      : 1_Introduction_12
+      title   : **1 Introduction**
+      summary : Over the last two and a half years we have designed, implemented, and deployed a distributed storage system for managing structured data at Google called Bigtable. Bigtable is designed to reliably scale to petabytes of data and thousands of machines. Bigtable has achieved several goals: wide applica
+      pages   : 1–1
+      preview : 
+    
+    Over the last two and a half years we have designed, implemented, and deployed a distributed storage system for managing structured data at Google called Bigtable. Bigtable is designed to reliably scale to petabytes of data and thousands of machines. Bigtable has achieved several goals: wide applicability, scalability, high performance, and high availability. Bigtable is used by more than sixty Google products and projects, including Google Analytics, Google Finance, Orkut, Personalized Search
+    
+    Children: None (leaf node)
+    
+    Decide:
+    1. confidence      : 0–1, how likely does this node (or its children) contain the answer?
+    2. should_descend  : true only if a specific child is more relevant than this node's content
+    3. target_child_id : the id of the best child to visit (null if should_descend is false)
+    4. reasoning       : one sentence explaining your decision
+    
+    Respond ONLY as valid JSON, no markdown fences:
+    {
+      "confidence": 0.85,
+      "should_descend": true,
+      "target_child_id": "1_Introduction_12",
+      "reasoning": "The Introduction section directly addresses what Bigtable is."
+    }
+23:05:59  DEBUG    RAW RESPONSE:
+    {
+      "confidence": 0.85,
+      "should_descend": false,
+      "target_child_id": null,
+      "reasoning": "The Introduction section directly addresses what Bigtable is and the problems it solves, making it sufficient for the query." 
+    }
+23:05:59  INFO       Model    : gpt-4o-mini
+23:05:59  INFO       Latency  : 3.18s
+23:05:59  INFO       Tokens   : 369 in / 56 out
+23:05:59  INFO         │
+23:05:59  INFO         │  Decision   : → retrieve
+23:05:59  INFO         │  Confidence : 85%
+23:05:59  INFO         │  Reasoning  : The Introduction section directly addresses what Bigtable is and the problems it solves, making it sufficient for the query.
+23:05:59  INFO         └─ (3.18s)
+23:05:59  INFO     
+      ✦  Retrieving content from: "**1 Introduction**"
+23:05:59  INFO              Pages 1–1 | 2539 chars
+23:05:59  INFO     
+─────────────────────────────────────────────────────────────────
+23:05:59  INFO       Generating answer from 1 retrieved section(s):
+23:05:59  INFO         • === ****1 Introduction**** (Pages 1-1) ===
+23:05:59  INFO     
+─────────────────────────────────────────────────────────────────
+23:05:59  INFO       LLM Call #4  [ANSWER]
+23:05:59  INFO     ─────────────────────────────────────────────────────────────────
+23:05:59  DEBUG    PROMPT:
+    You are an expert on distributed systems and database engineering.
+    Answer the question using ONLY the retrieved document sections below.
+    Cite the section title and page range for every claim you make.
+    If the context is insufficient, say so clearly — do not guess.
+    
+    Question: What is Bigtable and what problem does it solve?
+    
+    Retrieved sections:
+    === ****1 Introduction**** (Pages 1-1) ===
+    
+    
+    Over the last two and a half years we have designed, implemented, and deployed a distributed storage system for managing structured data at Google called Bigtable. Bigtable is designed to reliably scale to petabytes of data and thousands of machines. Bigtable has achieved several goals: wide applicability, scalability, high performance, and high availability. Bigtable is used by more than sixty Google products and projects, including Google Analytics, Google Finance, Orkut, Personalized Search, Writely, and Google Earth. These products use Bigtable for a variety of demanding workloads, which range from throughput-oriented batch-processing jobs to latency-sensitive serving of data to end users. The Bigtable clusters used by these products span a wide range of configurations, from a handful to thousands of servers, and store up to several hundred terabytes of data. 
+    
+    In many ways, Bigtable resembles a database: it shares many implementation strategies with databases. Parallel databases [14] and main-memory databases [13] have 
+    
+    achieved scalability and high performance, but Bigtable provides a different interface than such systems. Bigtable does not support a full relational data model; instead, it provides clients with a simple data model that supports dynamic control over data layout and format, and allows clients to reason about the locality properties of the data represented in the underlying storage. Data is indexed using row and column names that can be arbitrary strings. Bigtable also treats data as uninterpreted strings, although clients often serialize various forms of structured and semi-structured data into these strings. Clients can control the locality of their data through careful choices in their schemas. Finally, Bigtable schema parameters let clients dynamically control whether to serve data out of memory or from disk. 
+    
+    Section 2 describes the data model in more detail, and Section 3 provides an overview of the client API. Section 4 briefly describes the underlying Google infrastructure on which Bigtable depends. Section 5 describes the fundamentals of the Bigtable implementation, and Section 6 describes some of the refinements that we made to improve Bigtable’s performance. Section 7 provides measurements of Bigtable’s performance. We describe several examples of how Bigtable is used at Google in Section 8, and discuss some lessons we learned in designing and supporting Bigtable in Section 9. Finally, Section 10 describes related work, and Section 11 presents our conclusions.
+    
+    Answer:
+23:06:06  DEBUG    RAW RESPONSE:
+    Bigtable is a distributed storage system designed for managing structured data at Google. It addresses the need for a system that can reliably scale to petabytes of data and thousands of machines while achieving goals such as wide applicability, scalability, high performance, and high availability. It is utilized by over sixty Google products and projects for various demanding workloads, including both throughput-oriented batch-processing jobs and latency-sensitive data serving to end users (Section 1 Introduction, Pages 1-1).
+    
+    Bigtable resembles a database but does not support a full relational data model. Instead, it offers a simple data model that allows clients to control data layout and format dynamically, as well as manage data locality. Data is indexed using arbitrary strings for row and column names, and it treats data as uninterpreted strings, enabling clients to serialize structured and semi-structured data. Clients can also influence data locality through schema choices and control whether data is served from memory or disk (Section 1 Introduction, Pages 1-1).
+23:06:06  INFO       Model    : gpt-4o-mini
+23:06:06  INFO       Latency  : 6.77s
+23:06:06  INFO       Tokens   : 564 in / 199 out
+23:06:06  INFO     
+  Answer generated in 6.77s
+23:06:06  INFO     
+═════════════════════════════════════════════════════════════════
+23:06:06  INFO       RETRIEVAL SUMMARY
+23:06:06  INFO     ═════════════════════════════════════════════════════════════════
+23:06:06  INFO       Total LLM calls : 4  (3 navigate + 1 answer)
+23:06:06  INFO       Path taken      : root → Bigtable_A_Distribut_0 → 1_Introduction_12
+23:06:06  INFO       Total latency   : 15.60s
+23:06:06  INFO     ═════════════════════════════════════════════════════════════════
